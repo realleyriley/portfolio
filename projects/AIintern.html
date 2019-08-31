@@ -11,9 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.1.266/build/pdf.min.js"></script>
 	</head>
 	<body class="is-preload">
-
+		
 		<!-- Header -->
 			<header id="header">
 				<a href="../index.html" class="title">Riley Tallman</a>
@@ -33,23 +34,36 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Artificial Intelligence Intern</h1>
-							<span class="image fit"><img src="../images/projects/AI%20Intern/" alt="" /></span>
+							<!-- <span class="image fit"><img src="../images/projects/AI%20Intern/" alt="" /></span> -->
 							<div style=>
-								<p>Over the summer between my Junior and Senior years at ASU, I worked at Systems Imagination with their 2nd year of interns. 
-									In the first week I was promoted to team lead where I would be leading 4 other members on our project.</p>
-								<p>During the first half, the company tasked me with finding new use cases for their propriety hypergraph database so that they 
-									could sell it to new customers. We successfully implemented the propriety hypergraph using the <a href="https://openflights.org/data.html" 
-									target="_blank">Open Flights Dataset</a> from <a href="https://openflights.org/" target="_blank">OpenFlights.org</a>, but unfortunately 
-									the underlying data was not complex enough to benefit from the hypergraph.</p>
-								<p>During the second half, I shifted the team towards a project with more AI, and so we decided to compete in the 
-									<a href="https://www.kaggle.com/c/champs-scalar-coupling/overview" target="_blank">Predicting Molecular Properties kaggle competition</a>. 
-									The poster below summarizes our experience, but it was really great	to see all the colaboration and learning taking place within the 
-									discussion and notebook sections on kaggle. People would publicly post their solutions with code, and others would comment and learn from it.</p>
-								<p>I really loved working with Systems Imagination because I got to do hands on AI projects and work in an awesome office.</p>
+								<p>Over the summer between my Junior and Senior years at ASU, I worked at Systems Imagination. In the first week I was promoted to team lead where I would be leading 4 other members on our project.</p>
+								<p>During the first half, the company tasked me with finding new use cases for their propriety hypergraph database so that they could sell it to new customers. We successfully implemented the propriety hypergraph using the <a href="https://openflights.org/data.html"	target="_blank">Open Flights Dataset</a> from <a href="https://openflights.org/" target="_blank">OpenFlights.org</a>, but unfortunately the underlying data was not complex enough to benefit from the hypergraph.</p>
+								<p>During the second half, I shifted the team towards a project with more AI, and so we decided to compete in the <a href="https://www.kaggle.com/c/champs-scalar-coupling/overview" target="_blank">Predicting Molecular Properties kaggle competition</a>. The poster below summarizes our experience, but it was really great to see all the colaboration and learning taking place within the discussion and notebook sections on kaggle. People would publicly post their solutions with code, and others would comment and learn from it.</p>
+								<p>I really loved working with Systems Imagination because I got to do hands on AI projects and work in an awesome office🙂🍕</p>
 							</div>
-							<embed class="image fit" src="../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf" alt="" /></span>
+							<!-- <embed width=100% type="application/pdf" src="../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf" alt="" /></span> -->
+							<canvas class="image fit" id="my_canvas" href="google.com"></canvas>
+							<script>
+								pdfjsLib.getDocument('../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf').then(doc => {
+									console.log("This file has " + doc._pdfInfo.numPages + " pages");
+									doc.getPage(1).then(page => {
+										var myCanvas = document.getElementById("my_canvas");
+										var context = myCanvas.getContext("2d");
+										var viewport = page.getViewport(1);
+										myCanvas.width = viewport.width;
+										myCanvas.height = viewport.height;
+										page.render({
+											canvasContext: context,
+											viewport: viewport
+										});
+									});
+								});
+							</script>
 							<div style=>
-								<p><a href="https://www.systemsimagination.com/" target="_blank">Systems Imagination</a></p>
+								<a href="../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf" target="_blank">👁‍🗨Open poster in new tab</a>
+								<br>
+								<br>
+								<p><a href="https://www.systemsimagination.com/" target="_blank">🌐Systems Imagination</a></p>
 							</div>
 						</div>
 					</section>
