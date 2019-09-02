@@ -10,18 +10,23 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="icon" href="/images/GoogleR.png">
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.1.266/build/pdf.min.js"></script>
 	</head>
 	<body class="is-preload">
-
+		
 		<!-- Header -->
 			<header id="header">
 				<a href="../index.html" class="title">Riley Tallman</a>
 				<nav>
-					<ul>
+					<ul class="icons">
 						<li><a href="../index.html">Home</a></li>
-						<li><a href="../generic.html" class="active">Generic</a></li>
-						<li><a href="../elements.html">Elements</a></li>
+						<li><a href="../index.html#three">Contact Riley</a></li>
+						<li><a href="../images/2019%20Resume.pdf" target="_blank">resume</a></li>
+						<li><a href="https://github.com/rptallman" target="_blank" class="fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/rileytallman/" target="_blank" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.behance.net/rptallman" target="_blank" class="fa-behance"><span class="label">Behance</span></a></li>
 					</ul>
 				</nav>
 			</header>
@@ -33,10 +38,17 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">C++ Hash Table</h1>
-							<span class="image fit"><img src="../images/projects/C++ Hash Table/TowerStacker.PNG" alt="" /></span>
+							<!-- <span class="image fit"><img src="../images/projects/AI%20Intern/" alt="" /></span> -->
 							<div style=>
-								<p>Here's how I made a hash table.</p>
-								<p>In conclusion, hash tables are a power full tool that I hope to use one day in practice :)</p>
+								<p>Once I learned about hashs tables, I thought they were the coolest thing. You could access data immediately! Why would you not use hash tables everywhere? But there are drawbacks as I learned, like collisions. Anyway I wanted to practice making hash tables, so I made a word unscrambler with a hash table.</p>
+								<p>A word unscrambler is the thing you use to cheat in Words with Friends and scrabble. It takes in a set of letters (like "abc") and outputs a list of possible words to create from them (like CAB, DAB, and BAD). A hash table is great for this application because we need to compare permutations of the letters against all words to see if they match. All these comparisons need to be fast, and a hash table is fast for lookups. 😁</p>
+								<p>So I begun by downloading the first available dictionary I found on the internet. I got one with 236k words, and now needed to engineer the hash table that will be my dictionary. I decided to go with chaining collision resolution. If you want to know the math behind it then look at the presentation linked below, but the end table had an average lookup of 8 words. This means when I want to compare one permutation of the input string (like BAD), then I only need to compare it against 8 other words on average. In the computer science world, lightning quick. ⚡</p>
+								<p>Here we can see how my application performs when given up to 9 letters.</p>
+								<span class="image fit"><img src="../images/projects/C++%20Hash%20Table/testing%20times.png" alt="" /></span>
+								<p>So that's how I made a hash table in C++ 🍤</p>
+								<ul class="actions">
+									<li><a href="../images/projects/C++%20Hash%20Table/Word%20Unscrambler%20Design%20Process.pdf" class="button" target="_blank">Short Powerpoint</a></li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -47,7 +59,15 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<ul class="icons" style="margin-bottom: 0.4em;">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../index.html#three">Contact Riley</a></li>
+							<li><a href="../images/2019%20Resume.pdf" target="_blank">Resume</a></li>
+							<li><a href="https://github.com/rptallman" target="_blank" class="fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/rileytallman/" target="_blank" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.behance.net/rptallman" target="_blank" class="fa-behance"><span class="label">Behance</span></a></li>
+						</ul>
+						<p>&copy; Riley Tallman. All rights reserved.</p>
 					</ul>
 				</div>
 			</footer>
