@@ -40,15 +40,29 @@
 							<h1 class="major">C++ Hash Table</h1>
 							<!-- <span class="image fit"><img src="../images/projects/AI%20Intern/" alt="" /></span> -->
 							<div style=>
-								<p>Once I learned about hashs tables, I thought they were the coolest thing. You could access data immediately! Why would you not use hash tables everywhere? But there are drawbacks as I learned, like collisions. Anyway I wanted to practice making hash tables, so I made a word unscrambler with a hash table.</p>
-								<p>A word unscrambler is the thing you use to cheat in Words with Friends and scrabble. It takes in a set of letters (like "abc") and outputs a list of possible words to create from them (like CAB, DAB, and BAD). A hash table is great for this application because we need to compare permutations of the letters against all words to see if they match. All these comparisons need to be fast, and a hash table is fast for lookups. 😁</p>
-								<p>So I begun by downloading the first available dictionary I found on the internet. I got one with 236k words, and now needed to engineer the hash table that will be my dictionary. I decided to go with chaining collision resolution. If you want to know the math behind it then look at the presentation linked below, but the end table had an average lookup of 8 words. This means when I want to compare one permutation of the input string (like BAD), then I only need to compare it against 8 other words on average. In the computer science world, lightning quick. ⚡</p>
-								<p>Here we can see how my application performs when given up to 9 letters.</p>
-								<span class="image fit"><img src="../images/projects/C++%20Hash%20Table/testing%20times.png" alt="" /></span>
-								<p>So that's how I made a hash table in C++ 🍤</p>
+								<p>I learned about hash tables in my Data Strucutures and Algorithms class. I thought they were the coolest thing because you could access and insert data immediately! Why would you not use hash tables everywhere? But there are drawbacks as I learned, like collisions.</p>
+								
+								<p style="font-size:30px; margin-bottom:6px;"><strong>The Project</strong></p>
+								<p>Since hash tables were so powerful I wanted to build one. I thought a good application for it might be a word unscrambler. A word unscrambler is the thing you use to cheat in Words with Friends and scrabble. It takes in a set of letters (like "abc") and outputs a list of possible words to create from them (like cab, dab, and bad). A hash table is great for this because we need to compare permutations of the letters against all words to see if they match, meaning that permutation is a word. All these comparisons need to be fast, and a hash table is fast for accessing elements, just like looking up words in a dictionary.</p>
+								
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Results</strong></p>
+								<p>I downloaded a dictionary with 236k words, and engineered a hash table dictionary with collision resolution by chaining. If you want to know the math behind the whole thing then look into the presentation linked below, but the final table had an average lookup of 8 words. This means that when I want to compare one permutation of the input string (like bad), then I only need to compare it against 8 other words on average. In the computer science world, this is lightning quick⚡.</p>
 								<ul class="actions">
 									<li><a href="../images/projects/C++%20Hash%20Table/Word%20Unscrambler%20Design%20Process.pdf" class="button" target="_blank">Short Powerpoint</a></li>
 								</ul>
+								<p>Here we can see how my application performs when given up to 9 letters.</p>
+								<span class="image fit"><img src="../images/projects/C++%20Hash%20Table/testing%20times.png" alt="" /></span>
+								<p>As you can see the total time is takes to unscramble quickly increases with more letters. This is because the permutations grow very quickly. There are <i>n!</i> permutations for <i>n</i> characters, and my algorithm tests each permutation against an average of 8 words.</p>
+ 
+								<p style="font-size:30px; margin-bottom:6px;"><strong>What I Learned</strong></p>
+								<p style="margin:0px;"><ol>
+									<li>Hash Tables - I learned how to engineer one from top to bottom: collision resolution techniques for building them, hash functions for inserting and deleting, and managing the size of the table and the time it takes to find what you're looking for.</li>
+									<li>Computation - This was my first project that used more than 20% of the CPU, so I realized that a lot of computer science is about making things efficient. Processing power is limited, so computer science is really about building amazing <i>efficient</i> things.</li>
+									</ol>
+								</p>
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Conclusion</strong></p>
+								<p>Hash tables are super cool and I really enjoyed this project. I hope I get to make one later when I'm working in the real world. I've finally broken through to the other side of computational power and made an application that will break if you push it too hard. I now understand the importance of efficient code.</p>
 							</div>
 						</div>
 					</section>

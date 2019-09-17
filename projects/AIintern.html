@@ -38,10 +38,12 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Artificial Intelligence Intern</h1>
-							<!-- <span class="image fit"><img src="../images/projects/AI%20Intern/" alt="" /></span> -->
+							<span class="image fit"><img src="../images/projects/AI%20Intern/SI%20Logo%202.png" alt="" /></span>
 							<div style=>
-								<p>Over the summer between my Junior and Senior years at ASU, I worked at Systems Imagination. In the first week I was promoted to team lead where I would be managing 4 other members on our project.</p>
-								<p>During the first half, the company tasked me with finding new use cases for their propriety hypergraph database so that they could sell it to new customers. We successfully implemented the propriety hypergraph using the <a href="https://openflights.org/data"	target="_blank">Open Flights Dataset</a> from <a href="https://openflights.org/" target="_blank">OpenFlights.org</a>, but unfortunately the underlying data was not complex enough to benefit from the hypergraph.</p>
+								<p>Over the summer between my Junior and Senior years at ASU, I worked at Systems Imagination, a small tech startup focused on artificial intelligence and data analytics with genomics and bioinformatics. In the first week I was promoted to team lead where I would be managing 4 other members on our project.</p>
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>The Project</strong></p>
+								<p>During the first half, the company tasked me with finding new use cases for their propriety hypergraph database so that they could sell it to new customers. We successfully implemented a new hypergraph using the <a href="https://openflights.org/data"	target="_blank">Open Flights Dataset</a> from <a href="https://openflights.org/" target="_blank">OpenFlights.org</a>, but the underlying data was unfortunately not complex enough to benefit from the hypergraph.</p>
 								<p>During the second half, I shifted the team towards a project with more AI, and so we decided to compete in the <a href="https://www.kaggle.com/c/champs-scalar-coupling/overview" target="_blank">Predicting Molecular Properties kaggle competition</a>. The poster below summarizes our experience, but it was really great to see all the colaboration and learning taking place within the discussion and notebook sections on kaggle. People would publicly post their solutions with code, and others would comment and learn from it.</p>
 							</div>
 							<!-- <embed width=100% type="application/pdf" src="../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf" alt="" /></span> -->
@@ -67,7 +69,23 @@
 									<li><a href="../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf" class="button" target="_blank">Open poster in new tab</a></li>
 								</ul>
 
-								<p>I really loved working with Systems Imagination because I got to do hands on AI projects and work in an awesome office. 🙂 Thanks to <a href="https://www.linkedin.com/in/kendyl-douglas-1b1b40a2/" target="_blank">Kendyl Douglass</a> for giving me the opportunity to intern with them, and to <a href="https://www.linkedin.com/in/davidschneideraz/" target="_blank">David Schneider</a> for his mentorship.</p>
+								<p style="font-size:30px; margin-bottom:6px;"><strong>The NVIDIA DGX Workstation</strong></p>
+								<p>Systems imagination takes big data seriously. In the office they have a $40,000 computer from NVIDIA with 256GB of RAM, 4 GPUs, and a 40 core CPU. I used this beast to train AI algorithms, and boy was it effective. Since our team took a data-driven approach, we created over 1,000 features which adds up to multiple gigabytes of data. This is usually impossible to work with on average desktop computers with 16GB of ram and lower GPU and CPU benchmarks because they can't handle the amount of data or the computation would take to long. But with a DGX, this is not a problem. I threw all the engineered features at the DGX and trained a boosted random forest. I'm proud to say that I was using 100% of the 40 core CPU. After the training, this model scored the best yet, placing us higher on the kaggle leaderboard. I think I can say I know what big data is now.</p>
+								<ul class="actions">
+										<li><a href="../images/projects/AI%20Intern/DGX%20Station%20Infographic.pdf" class="button" target="_blank">DGX Full Specs</a></li>
+								</ul>
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>What I Learned</strong></p>
+								<p style="margin:0px;"><ol><li>Leadership - I led a team of 4 composed of a graduated biomedical engineer from ASU, a mathematics major from Carnegie Melon, a high school student from BASIS Scottsdale, and a fellow Computer Scientist from a local technological institute. The challenging part was distributing tasks that each person could handle given their background. I leared that it's important to provide reasons to people you are giving tasks to, so that they understand the goal of what they are doing. Otherwise they will be lost and may not ask clarifying questions.</li>
+									<li>Scrum - At the beginning of the project, the biomedical engineer got a scrum certification, so he practiced being the role of scrum master for our team. He also served on the development team, and I led the team as the product owner working on the development team. It was great to get more practice with scrum, and I while I enjoy leading, I also enjoy working so the product owner role is great for me.</li>
+									<li>Startup Culture - The office was small and very relaxed. The CEO actively promoted the "free innovation" mindset and encouraged employees to come up with business ideas and act on them. The whole summer we made references to the show Silicon Valley on HBO, which is a comedy about a start-up software company.</li>
+									<li>GPU Acceleration - I'm really happy I learned how to use Tensorflow and MXNet on multiple NVIDIA GPU's. The performance benefits are insane. I will definitely use this knowledge throughout the rest of my AI career.</li>
+									<li>Boosted Decision Trees - I learned the math behind the algorithm and how to tune the many hyperparameters. Things like number_of_estimators, max_depth, number_of_features, and iterations.</li>
+									</ol>
+								</p>
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Conclusion</strong></p>								
+								<p>I really loved working with Systems Imagination because I got to do hands on AI projects and work in an awesome office🙂. I practiced using boosted decision trees and fully connected neural networks. Using a super computer at 100% CPU usage while training a boosted random forest was the highlight of my internship. Thanks to <a href="https://www.linkedin.com/in/kendyl-douglas-1b1b40a2/" target="_blank">Kendyl Douglass</a> for giving me the opportunity to intern with them, and to <a href="https://www.linkedin.com/in/davidschneideraz/" target="_blank">David Schneider</a> for his mentorship.</p>
 
 								<ul class="actions">
 										<li><a href="https://www.systemsimagination.com/" class="button" target="_blank">Systems Imagination</a></li>
@@ -82,7 +100,7 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<ul class="icons" style="margin-bottom: 0.4em;">
+						<ul class="icons" style="margin: 0.4em;">
 							<li><a href="../index">Home</a></li>
 							<li><a href="../index#three">Contact Riley</a></li>
 							<li><a href="../images/2019%20Resume.pdf" target="_blank">Resume</a></li>
