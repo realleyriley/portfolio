@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Autonomous Driving - Capstone Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="icon" href="/images/GoogleR.png">
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.1.266/build/pdf.min.js"></script>
+	</head>
+	<body class="is-preload">
+		
+		<!-- Header -->
+			<header id="header">
+				<a href="../index" class="title">Riley Tallman</a>
+				<nav>
+					<ul class="icons">
+						<li><a href="../index">Home</a></li>
+						<li><a href="../index#three">Contact Riley</a></li>
+						<li><a href="../images/2019%20Resume.pdf" target="_blank">resume</a></li>
+						<li><a href="https://github.com/rptallman" target="_blank" class="fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/rileytallman/" target="_blank" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.behance.net/rptallman" target="_blank" class="fa-behance"><span class="label">Behance</span></a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Autonomous Driving - Capstone Project</h1>
+							<span class="image right"><img src="../images/projects/Hackathon/LightSpeed.png" alt="" /></span>
+							<div style=>
+								<p>For my capstone project, I worked with a team to drive a <a href="https://www.sparkfun.com/products/15365" target="_blank"></a>miniature robot</a> autonomously and avoid obstacles. I named the team "LightSpeed" and created our logo (on the right). Near the end of the project, we competed in a hackathon hosted at ASU and organized by Amazon. The team worked very hard and persisted through difficulties during the hackathon, and in the end, it paid off. Our team clocked the fasted lap time around a track and took first place. We enjoyed applying machine learning to the robot, and it was incredibly rewarding to show it off and see our hard work in action.<p>
+
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Autonomous Driving</strong></p>
+								<p>The first part of the challenge was to drive the robot autonomously through a miniature race track. The team with the best lap time around the track won the most points for this category. The bot had a front-facing camera, so to drive our robot, our team used computer vision to analyze the video feed and steer the bot to stay within boundaries and finish the track.</p>
+								<p>The team first took pictures of the track from the bots camera, and marked the x and y coordinates that the bot should steer towards. The coordinates serve as a direction that the robot should steer towards. We then used transfer learning to create our own robust convolutional neural network to predict the x and y coordinates. Taking a pre-trained res-net18 and training it on our images was much faster and more robust than training a CNN from scratch.</p>
+								<p>Once the model was trained, the robot was ready to race through the track autonomously. We repeatedly tested it and tuned some steering and speed parameters to achieve the fastest time. During the competition, our robot lapped the track in 9.27 seconds and took first place.</p>
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Showboat</strong></p>
+								<p>Our team also created what we called, the JetBot Terminator. The robot was an assassin trained to recognize images of faces and kill them. Once the robot received an SMS message with the name of its target, it would spin in a circle to find its target. Once found, it would move in, terminate the subject, and return to its original position waiting for its next target. Watch the video of me presenting :)</p>
+								<p>This application used Flask, ngrok, and Twilio to set up a server on the robot to receive SMS messages. Once it received the SMS message, it spun in a circle until the camera was pointing at its target. We used transfer learning again to train an Alexnet CNN to classify the faces of targets. The rest of the application is just some simple motor controls to move the bot forward and backward.</p>
+
+								
+								<!-- <iframe width="560" height="315" src="https://drive.google.com/file/d/1llqM62OJkvWs8lLF-lMKgf3ut_qd2tPO/view?usp=sharing" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<ul class="actions">
+									<li><a href="https://drive.google.com/file/d/1llqM62OJkvWs8lLF-lMKgf3ut_qd2tPO/view?usp=sharing" class="button" target="_blank">Video Presentation</a></li>
+								
+								</ul>
+								
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Acknowledgements</strong></p>
+								<p>Thanks to Professor Yinong Chen for working with our team throughout the capstone project.</p>
+
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>What I've Learned</strong></p>
+								<p style="margin:0px;"><ol><li>AWS - Robomaker, Sagemaker, Greengrass, and Cloud9 are services that I used to deploy ROS applications, use GPU accelerated cloud computing, and use an IDE in the cloud.</li>
+									<li>Robotics - the Jetson Nano uses an ARM64 architecture, and so all programs that run on it need to support that architecture.</li>
+									<li>Docker - we needed to bundle and build our ROS application inside a docker container in order for it to work with the ARM64 architecture of the Jetson Nano.</li>
+									<li>Teamwork - I've figured out efficient teamwork methods after leading our team of 4 throughout the project.</li>
+									</ol>
+								</p>
+
+								<p style="font-size:30px; margin-bottom:6px;"><strong>Two Articles about the Hackathon</strong></p>
+								<ul class="actions">
+										<li><a href="https://www.statepress.com/article/2019/11/spbiztech-asu-team-takes-first-place-in-the-states-first-robo-hackathon" class="button" target="_blank">State Press</a></li>
+										<li><a href="https://fullcircle.asu.edu/students/arizona-wide-robo-hackathon-puts-students-technical-skills-to-the-test/" class="button" target="_blank">Full Circle</a></li>
+								</ul>
+							</div>
+							<!-- <canvas class="image fit" id="my_canvas" href="google.com"></canvas>
+							<script>
+								pdfjsLib.getDocument('../images/projects/AI%20Intern/Predicting%20Molecular%20Properties%20Poster.pdf').then(doc => {
+									console.log("This file has " + doc._pdfInfo.numPages + " pages");
+									doc.getPage(1).then(page => {
+										var myCanvas = document.getElementById("my_canvas");
+										var context = myCanvas.getContext("2d");
+										var viewport = page.getViewport(1);
+										myCanvas.width = viewport.width;
+										myCanvas.height = viewport.height;
+										page.render({
+											canvasContext: context,
+											viewport: viewport
+										});
+									});
+								});
+							</script> -->
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<ul class="icons" style="margin-bottom: 0.4em;">
+							<li><a href="../index">Home</a></li>
+							<li><a href="../index#three">Contact Riley</a></li>
+							<li><a href="../images/2019%20Resume.pdf" target="_blank">Resume</a></li>
+							<li><a href="https://github.com/rptallman" target="_blank" class="fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/rileytallman/" target="_blank" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.behance.net/rptallman" target="_blank" class="fa-behance"><span class="label">Behance</span></a></li>
+						</ul>
+						<p>&copy; Riley Tallman. All rights reserved.</p>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
